@@ -2,16 +2,17 @@
 </script>
 
 <template>
+
     <header>
-        <section class="FlexContainer1">
+        <section class='grid-area1'>
             <div class="telephone-container">
                 <svg class="tel_icon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.65417 15.7354C11.7542 19.8625 15.1375 23.2312 19.2646 25.3458L22.4729 22.1375C22.8667 21.7438 23.45 21.6125 23.9604 21.7875C25.5938 22.3271 27.3583 22.6188 29.1667 22.6188C29.9688 22.6188 30.625 23.275 30.625 24.0771V29.1667C30.625 29.9688 29.9688 30.625 29.1667 30.625C15.4729 30.625 4.375 19.5271 4.375 5.83333C4.375 5.03125 5.03125 4.375 5.83333 4.375H10.9375C11.7396 4.375 12.3958 5.03125 12.3958 5.83333C12.3958 7.65625 12.6875 9.40625 13.2271 11.0396C13.3875 11.55 13.2708 12.1188 12.8625 12.5271L9.65417 15.7354Z" fill="black"/>
                 </svg>
-                <input type="text" class="phone" placeholder="Digite o telefone">
+                    <input type="text" id="phone" placeholder="Telefone">
             </div>
             <div class="date-container">
-                <input type="date" class="date">
+                <input type="date" id="date">
             </div>
             <div class="lupa-container">    
                 <svg class="lupa-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,11 +20,11 @@
                 </svg>
             </div>          
         </section>  
-          
-        <section class="FlexContainer2">
+            
+        <section class='grid-area2'>
             <svg class="photo-icon" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g class="Person" clip-path="url(#clip0_1_45)">
-                <path class="Vector" d="M22.5 22.5C26.6437 22.5 30 19.1438 30 15C30 10.8562 26.6437 7.5 22.5 7.5C18.3562 7.5 15 10.8562 15 15C15 19.1438 18.3562 22.5 22.5 22.5ZM22.5 26.25C17.4937 26.25 7.5 28.7625 7.5 33.75V37.5H37.5V33.75C37.5 28.7625 27.5063 26.25 22.5 26.25Z" fill="black"/>
+                <g id="Person" clip-path="url(#clip0_1_45)">
+                <path id="Vector" d="M22.5 22.5C26.6437 22.5 30 19.1438 30 15C30 10.8562 26.6437 7.5 22.5 7.5C18.3562 7.5 15 10.8562 15 15C15 19.1438 18.3562 22.5 22.5 22.5ZM22.5 26.25C17.4937 26.25 7.5 28.7625 7.5 33.75V37.5H37.5V33.75C37.5 28.7625 27.5063 26.25 22.5 26.25Z" fill="black"/>
                 </g>
                 <defs>
                 <clipPath id="clip0_1_45">
@@ -34,126 +35,88 @@
             <div class="name">
                 <spam>João Kleber</spam>
             </div>
-        </section>
-    </header>
-    
+        </section>                        
+    </header>  
 
 
 </template>
 
 <style scoped>
 
-.FlexContainer1 {
+.grid-area1 {
     display: flex;
-    margin-top: 35px;
-    padding: 5px;
+    border-radius: 10px;
 }
 
-.telephone-container {
+.telephone-container{
     display: flex;
     background-color: white;
     justify-content: center;
     align-items: center;
     width: 380px;
-    height: 60px;
     margin-right: 15px;
     position: relative;
     border-radius: 10px;
-    box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
 }
 
-input[type=text] {
-    display: flex;
+input {
     border: none;
-    height: 40px;
-}
+    text-align: center;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+  }
 
-.tel_icon {
-    display: flex;
+
+.tel_icon{
     position: absolute;
     left: 15px;
 }
 
-.date-container {
-    display: flex;
+.date-container{
     background-color: white;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
     width: 200px;
-    height: 60px;
-    overflow: hidden;
-    flex-direction: row;
+    margin-right: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
 }
 
-input[type=date] {
-    display: flex;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border-radius: 4px;
-    box-sizing: border-box;
-    border: none;
-}
-
-.lupa-container {
+.lupa-container{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-left: 16px;
+    align-items: center;    
     background-color: white;
     width: 70px;
     height: 60px;
-    position: relative;
     border-radius: 10px;
-    box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
 }
 
-.lupa-icon:hover {
-    transform: scale(1.2);
+.lupa-icon:hover{
+    transform: scale(1.2);  
 }
 
-.lupa-container:hover {
+.lupa-container:hover{
     cursor: pointer;
 }
 
-.FlexContainer2 {
+.grid-area2{
     display: flex;
     align-items: center;
     height: 100px;
 }
 
-.photo-icon {
-    display: flex;
-    width: 75px;
-    height: 75px;
-    margin: 0px 60px;
+.photo-icon{
+    width: 70px;
+    height: 70px;
+    margin: 0px 60px; 
     border-radius: 50%;
     background-color: white;
 }
 
-.name {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.name{
     font-size: 20px;
-}
-
-.FlexContainer3 {
-    display: flex;
-    max-width: 700px;
-    max-height: 75vh;
-    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-}
-
-.chat-window {
-    display: flex;
-    flex-direction: column;
-    background: #CCC9C9;
-    overflow: auto;
 }
 
 </style>
